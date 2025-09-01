@@ -1,0 +1,131 @@
+/* Reset box-sizing for easier layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  background: linear-gradient(135deg, #a8d0ff 0%, #374785 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e2a38;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Container - central card */
+.container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 14px 28px rgba(55, 71, 133, 0.25), 0 10px 10px rgba(55, 71, 133, 0.22);
+  padding: 2rem 2.5rem;
+  max-width: 800px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading */
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #374785;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #3a4a75;
+  user-select: none;
+}
+
+/* Inputs & textarea */
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='file'],
+textarea {
+  padding: 0.65rem 1.85rem;
+  border-radius: 8px;
+  border: 2px solid #d0dafd;
+  font-size: 1rem;
+  color: #21325e;
+  font-weight: 500;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+  background: #f9fbff;
+  outline-offset: 2px;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='tel']:focus,
+input[type='file']:focus,
+textarea:focus {
+  border-color: #4d63e3;
+  box-shadow: 0 0 0 3px rgba(77, 99, 227, 0.3);
+  background: #ffffff;
+}
+
+/* Textarea specifics */
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Error message */
+.text-error {
+  font-size: 0.85rem;
+  color: #e03e3e;
+  margin-top: 0.2rem;
+  font-weight: 600;
+}
+
+/* Submit button */
+button[type='submit'] {
+  background: #4d63e3;
+  border: none;
+  color: #fff;
+  padding: 0.85rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(77, 99, 227, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+button[type='submit']:hover {
+  background: #3b4db2;
+  box-shadow: 0 15px 25px rgba(59, 77, 178, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 450px) {
+  .container {
+    padding: 1.5rem 1.75rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}

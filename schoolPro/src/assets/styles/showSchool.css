@@ -1,0 +1,176 @@
+/* Main background and header */
+.main-bg {
+  min-height: 100vh;
+  background: #f8fbff;
+  padding-bottom: 3rem;
+}
+
+.schools-header {
+  text-align: center;
+  margin-top: 3.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.schools-header h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #212a3e;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #818181;
+  font-size: 1.15rem;
+}
+
+/* Main card grid */
+.school-grid-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.school-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(60, 83, 130, 0.13);
+  padding: 2.5rem 2rem 2.5rem 2rem;
+}
+
+/* School Card */
+.school-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(33, 42, 62, 0.07);
+  overflow: hidden;
+  align-items: center;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+
+.school-card:hover {
+  box-shadow: 0 6px 16px rgba(33, 42, 62, 0.13);
+  transform: translateY(-2px) scale(1.012);
+}
+
+/* Card image */
+.school-image-box {
+  width: 100%;
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 13px 13px 0 0;
+  background: #eaf2fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.school-image {
+  width: 100%;
+  height: 250px;
+  /* object-fit: cover; */
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+/* Plus icon top-right */
+.plus-icon {
+  display: block;
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  background: linear-gradient(135deg, #f3f7fa 60%, #c3dafe 100%);
+  color: #374785;
+  border: 2px solid #d4e3f7;
+  font-size: 1.32rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(179, 199, 248, 0.14);
+}
+
+/* Card Info Section */
+.school-card-info {
+  padding: 1.1rem 1.1rem 0.3rem 1.1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.school-city {
+  font-size: 0.93rem;
+  color: #11a483;
+  font-weight: 600;
+  display: block;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.13rem;
+}
+
+.school-name {
+  font-size: 1.19rem;
+  color: #212a3e;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0.17em 0 0.13em 0;
+}
+
+.school-address {
+  font-size: 1.01rem;
+  color: #636c7e;
+  margin: 0 0 0.5em 0;
+}
+
+/* Apply Now Button */
+.apply-btn {
+  width: auto;
+  margin: 0.85em 0 1em 0;
+  background: #3fc246;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.57em 1rem;
+  transition: background 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  box-shadow: 0 3px 7px rgba(63, 194, 70, 0.10);
+}
+
+.apply-btn:hover {
+  background: #2b9933;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .school-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .schools-header {
+    margin-top: 2.3rem;
+  }
+  .school-cards-grid {
+    padding: 1.2rem 0.2rem;
+    gap: 1.35rem;
+  }
+  .school-card-info {
+    padding: 0.85rem 0.7rem 0.3rem 0.7rem;
+  }
+}
