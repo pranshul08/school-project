@@ -72,7 +72,7 @@ const AddSchool = () => {
           {errors.name && <p className="text-red-600">{errors.name.message}</p>}
         </div>
 
-        <div>
+        <div className='flex address_inputs'>
           <label className="block mb-1 font-medium">Address: </label>
           <textarea
             {...register('address', { required: 'Address is required' })}
